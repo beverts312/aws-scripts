@@ -1,12 +1,12 @@
 {
-  "name": "aws-scripts",
+  "name": "node-aws-utils",
   "description": "",
   "version": "0.0.1",
   "license": "",
   "repository": {},
   "author": {
-    "url": "",
-    "name": "",
+    "url": "https://blog.baileyeverts.com",
+    "name": "Bailey Everts",
     "email": ""
   },
   "contributors": [
