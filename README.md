@@ -1,8 +1,5 @@
-# aws-scripts README
+# Node AWS Utils  
+Wrapper methods & scripts for easy use of the AWS SDK.  
 
-
-
-Initially created by this [swell generator][parent-generator-url]!
-
-# This is a convenient way to manage links within markdown
-[parent-generator-url]: https://github.com/swellaby/generator-swell
+#### Generator  
+Initially created by this [swell generator](https://github.com/swellaby/generator-swell)  
