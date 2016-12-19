@@ -19,21 +19,17 @@ class DnsUtils {
                         resolve(zones[i].Id);
                     }
                 }
-                reject(new Error('Could Not Find Record'));
+                reject(new Error('Could Not Find Record for ' + name));
             });
         });
     }
 
     async updateRecord(name: string, type: string, value: string) {
-        let zoneName = name;
         const nameArr = name.split('.');
-        if (nameArr.length === 3) {
-            zoneName = nameArr[1] + '.' + nameArr[2];
-        }
+        const zoneName = nameArr[nameArr.length - 2] + '.' + nameArr[nameArr.length - 1] + '.';
         if (type === 'TXT') {
             value = '"' + value + '"';
         }
-        zoneName += '.';
         const params: AWS.Route53.ChangeResourceRecordSetsRequest = {
             HostedZoneId: null,
             ChangeBatch: {

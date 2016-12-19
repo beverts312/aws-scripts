@@ -51,7 +51,7 @@ suite('Helper Suite -', () => {
             };
             listStub.yields(null, data);
             sut.getHostedZoneId('test').catch((err) => {
-                assert.equal(err.message, 'Could Not Find Record');
+                assert.equal(err.message, 'Could Not Find Record for test');
                 assert.isTrue(listStub.called);
                 done();
             });
