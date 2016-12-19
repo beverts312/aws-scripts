@@ -1,4 +1,3 @@
-//import AWS = require('aws-sdk');
 import DnsUtils = require('../lib/dns-utils');
 
 function usage() {
