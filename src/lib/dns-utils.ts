@@ -30,6 +30,9 @@ class DnsUtils {
         if (nameArr.length === 3) {
             zoneName = nameArr[1] + '.' + nameArr[2];
         }
+        if (type === 'TXT') {
+            value = '"' + value + '"';
+        }
         zoneName += '.';
         const params: AWS.Route53.ChangeResourceRecordSetsRequest = {
             HostedZoneId: null,
@@ -43,7 +46,7 @@ class DnsUtils {
                             TTL: 300,
                             ResourceRecords: [
                                 {
-                                    Value: '"' + value + '"'
+                                    Value: value
                                 }
                             ]
                         }
