@@ -4,7 +4,7 @@ import Chai = require('chai');
 import Sinon = require('sinon');
 import AWS = require('aws-sdk');
 
-import DnsUtils = require('../../src/lib/dns-utils');
+import DnsUtils = require('../src/dns-utils');
 
 const assert = Chai.assert;
 
