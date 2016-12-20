@@ -1,9 +1,12 @@
 {
-  "name": "node-aws-utils",
+  "name": "aws-mgmt-utils",
   "description": "",
   "version": "0.0.1",
   "license": "",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beverts312/node-aws-utils"
+  },
   "author": {
     "url": "https://blog.baileyeverts.com",
     "name": "Bailey Everts",
