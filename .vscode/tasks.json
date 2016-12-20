@@ -1,5 +1,4 @@
 {
-
 	"version": "0.1.0",
 	"command": "cmd",
 	"isShellCommand": true,
@@ -41,7 +40,15 @@
 			"args": [
 				"npm",
 				"run",
-                "clean"
+				"clean"
+			]
+		},
+		{
+			"taskName": "pack",
+			"suppressTaskName": true,
+			"args": [
+				"npm",
+				"pack"
 			]
 		}
 	]

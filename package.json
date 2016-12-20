@@ -9,13 +9,7 @@
     "name": "Bailey Everts",
     "email": ""
   },
-  "contributors": [
-    {
-      "url": "",
-      "name": "",
-      "email": ""
-    }
-  ],
+  "main": "src/index.js",
   "scripts": {
     "build": "gulp clean tslint transpile",
     "check-security": "gulp check-security",
