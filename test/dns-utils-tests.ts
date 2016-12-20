@@ -17,7 +17,7 @@ suite('Helper Suite -', () => {
 
         suiteSetup(() => {
             sandbox = Sinon.sandbox.create();
-            const t = { listHostedZones: () => { } };
+            const t = { listHostedZones: () => { } }; // tslint:disable-line
             listStub = Sinon.stub(t, 'listHostedZones');
             Sinon.stub(AWS, 'Route53').returns(t);
             sut = new DnsUtils();
