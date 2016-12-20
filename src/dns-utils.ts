@@ -1,12 +1,23 @@
 import AWS = require('aws-sdk');
 
 class DnsUtils {
-    dns: AWS.Route53;
+    private dns: AWS.Route53;
 
+    /**
+     * Creates an instance of DnsUtils.
+     * @param {AWS.Route53.ClientConfiguration} [opts]
+     * @memberOf DnsUtils
+     */
     constructor(opts?: AWS.Route53.ClientConfiguration) {
         this.dns = new AWS.Route53(opts);
     }
 
+    /**
+     * 
+     * @param {string} name
+     * @returns {Promise<string>}
+     * @memberOf DnsUtils
+     */
     getHostedZoneId(name: string): Promise<string> {
         return new Promise<string>((resolve, reject) => {
             this.dns.listHostedZones((err, data) => {
@@ -24,6 +35,14 @@ class DnsUtils {
         });
     }
 
+    /**
+     * Creates or Updates a Route53 DNS Record
+     * @param {string} name Record to update
+     * @param {string} type Record type
+     * @param {string} value Value to update
+     * @returns {Promise}
+     * @memberOf DnsUtils
+     */
     async updateRecord(name: string, type: string, value: string) {
         const nameArr = name.split('.');
         const zoneName = nameArr[nameArr.length - 2] + '.' + nameArr[nameArr.length - 1] + '.';

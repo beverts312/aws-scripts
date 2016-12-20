@@ -2,12 +2,25 @@ import AWS = require('aws-sdk');
 import fs = require('fs');
 
 class CloudFormationUtils {
-    cloudformation: AWS.CloudFormation;
+    private cloudformation: AWS.CloudFormation;
 
+    /**
+     * Creates an instance of CloudFormationUtils.
+     * @param {AWS.CloudFormation.ClientConfiguration} [opts]
+     * @memberOf CloudFormationUtils
+     */
     constructor(opts?: AWS.CloudFormation.ClientConfiguration) {
         this.cloudformation = new AWS.CloudFormation(opts);
     }
 
+    /**
+     * Creates/Updates a stack using a local template
+     * @param {string} name
+     * @param {string} templatePath
+     * @returns {Promise<string>}
+     * 
+     * @memberOf CloudFormationUtils
+     */
     createOrUpdateStackFile(name: string, templatePath: string): Promise<string> {
         const params = {
             StackName: name,
@@ -29,6 +42,13 @@ class CloudFormationUtils {
         });
     }
 
+    /**
+     * Creates/Updates a stack using a template hosted in S3
+     * @param {string} name
+     * @param {string} templateUrl
+     * @returns {Promise<string>}
+     * @memberOf CloudFormationUtils
+     */
     createOrUpdateStackUrl(name: string, templateUrl: string): Promise<string> {
         const params = {
             StackName: name,
@@ -50,6 +70,12 @@ class CloudFormationUtils {
         });
     }
 
+    /**
+     * Checks to see if a stack exists
+     * @param {string} name
+     * @returns {Promise<boolean>}
+     * @memberOf CloudFormationUtils
+     */
     checkIfStackExists(name: string): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.cloudformation.listStacks(null, (err, data) => {
@@ -68,6 +94,12 @@ class CloudFormationUtils {
 
     }
 
+    /**
+     * Creates a Stack and waits for completion of the operation
+     * @param {AWS.CloudFormation.CreateStackInput} params
+     * @returns {Promise<boolean>}
+     * @memberOf CloudFormationUtils
+     */
     createStackWithWait(params: AWS.CloudFormation.CreateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.cloudformation.createStack(params, (err, data) => {
@@ -87,6 +119,12 @@ class CloudFormationUtils {
         });
     }
 
+    /**
+     * Updates a Stack and waits for completion of the update
+     * @param {AWS.CloudFormation.UpdateStackInput} params
+     * @returns {Promise<boolean>}
+     * @memberOf CloudFormationUtils
+     */
     updateStackWithWait(params: AWS.CloudFormation.UpdateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.cloudformation.updateStack(params, (err, data) => {
