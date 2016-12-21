@@ -1,0 +1,10 @@
+.vscode
+build
+coverage
+test
+testresults
+.eslintignore
+.eslintrc.js
+.jshintignore
+.jshintrc
+gulpfile.js
