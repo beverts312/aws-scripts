@@ -1,7 +1,7 @@
 import AWS = require('aws-sdk');
 import fs = require('fs');
 
-class CloudFormationUtils {
+class CloudFormation {
     private cloudformation: AWS.CloudFormation;
 
     /**
@@ -145,4 +145,4 @@ class CloudFormationUtils {
     }
 }
 
-export = CloudFormationUtils;
+export = CloudFormation;

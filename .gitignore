@@ -14,10 +14,11 @@ coverage# IDE
 tsd-debug.log
 
 # Generated Javascript
-/lib/**/*.js*
+/scripts/**/*.js*
 /src/**/*.js*
 /test/**/*.js*
 /bin/**/*.js*
 /out/
 
 **/testresults/
+*.tgz

@@ -1,4 +1,4 @@
-import DnsUtils = require('../src/dns-utils');
+import utils = require('../src/index');
 
 function usage() {
     console.log('Usage: node update-record <record to update> <record type> <value>');
@@ -15,7 +15,7 @@ const record = process.argv[2];
 const type = process.argv[3];
 const value = process.argv[4];
 
-const dns = new DnsUtils();
+const dns = new utils.Dns();
 
 dns.updateRecord(record, type, value).then(() => {
     console.log('Success');
