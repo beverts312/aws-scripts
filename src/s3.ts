@@ -13,13 +13,6 @@ class S3 {
      */
     constructor(opts?: AWS.S3.ClientConfiguration) {
         this.s3 = new AWS.S3(opts);
-
-        /*AWS.config.update({
-            credentials: {
-                accessKeyId: 'AKIAI7S7D46V2J5MR6HQ',
-                secretAccessKey: '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'
-            }
-        });*/
     }
 
     /**
