@@ -29,9 +29,8 @@ class S3 {
             fs.lstat(toUpload, (err, stats) => {
                 if (err) { reject(err); }
                 if (stats.isDirectory()) {
-                    let pending = 0;
                     this.getFilesInDirectory(toUpload).then((files) => {
-                        pending += files.length;
+                        let pending = files.length - 1;
                         files.forEach((file) => {
                             let shortFile = file.substring(toUpload.length + 1);
                             if (prefix) {
