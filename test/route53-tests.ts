@@ -4,12 +4,12 @@ import Chai = require('chai');
 import Sinon = require('sinon');
 import AWS = require('aws-sdk');
 
-import DnsUtils = require('../src/dns');
+import Route53 = require('../src/route53');
 
 const assert = Chai.assert;
 
 suite('Helper Suite -', () => {
-    let sut: DnsUtils;
+    let sut: Route53;
 
     suite('getHostedZoneId Suite -', () => {
         let sandbox: Sinon.SinonSandbox;
@@ -20,7 +20,7 @@ suite('Helper Suite -', () => {
             const t = { listHostedZones: () => { } }; // tslint:disable-line
             listStub = Sinon.stub(t, 'listHostedZones');
             Sinon.stub(AWS, 'Route53').returns(t);
-            sut = new DnsUtils();
+            sut = new Route53();
         });
 
         suiteTeardown(() => {

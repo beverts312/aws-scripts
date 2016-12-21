@@ -1,6 +1,6 @@
 import AWS = require('aws-sdk');
 
-class Dns {
+class Route53 {
     private dns: AWS.Route53;
 
     /**
@@ -83,4 +83,4 @@ class Dns {
         });
     }
 }
-export = Dns;
+export = Route53;

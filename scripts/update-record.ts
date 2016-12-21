@@ -15,7 +15,7 @@ const record = process.argv[2];
 const type = process.argv[3];
 const value = process.argv[4];
 
-const dns = new utils.Dns();
+const dns = new utils.Route53();
 
 dns.updateRecord(record, type, value).then(() => {
     console.log('Success');
