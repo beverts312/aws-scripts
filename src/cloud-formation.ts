@@ -100,7 +100,7 @@ class CloudFormation {
      * @returns {Promise<boolean>}
      * @memberOf CloudFormationUtils
      */
-    createStackWithWait(params: AWS.CloudFormation.CreateStackInput): Promise<boolean> {
+    private createStackWithWait(params: AWS.CloudFormation.CreateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.cloudformation.createStack(params, (err, data) => {
                 if (err) {
@@ -125,7 +125,7 @@ class CloudFormation {
      * @returns {Promise<boolean>}
      * @memberOf CloudFormationUtils
      */
-    updateStackWithWait(params: AWS.CloudFormation.UpdateStackInput): Promise<boolean> {
+    private updateStackWithWait(params: AWS.CloudFormation.UpdateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             this.cloudformation.updateStack(params, (err, data) => {
                 if (err) {
