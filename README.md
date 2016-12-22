@@ -45,7 +45,7 @@ All core developer functions are npm scripts:
 * `npm run test` - Run unit tests  
 * `npm run clean` - Remove transpiled javascript  
 
-The files in the [.vscode directory](./vscode) configure the [VS Code Editor](https://code.visualstudio.com) for use with this project.  
+The files in the [.vscode directory](./.vscode) configure the [VS Code Editor](https://code.visualstudio.com) for use with this project.  
 If you use VS Code I would reccomend the [Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks) extension, this will make all of those core deceloper tasks (and more) buttons on the bottom of your editor.  
 
 #### Generator  
