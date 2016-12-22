@@ -17,25 +17,25 @@ class CloudFormation {
      * Creates/Updates a stack using a local template
      * @param {string} name
      * @param {string} templatePath
-     * @returns {Promise<string>}
+     * @returns {Promise}
      * 
      * @memberOf CloudFormationUtils
      */
-    createOrUpdateStackFile(name: string, templatePath: string): Promise<string> {
+    async createOrUpdateStackFile(name: string, templatePath: string) {
         const params = {
             StackName: name,
             TemplateBody: fs.readFileSync(templatePath, 'utf8'),
             Capabilities: ['CAPABILITY_IAM']
         };
-        return new Promise<string>((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             this.checkIfStackExists(params.StackName).then((exists) => {
                 if (exists === true) {
                     console.log('Stack exists, updating existing stack');
-                    this.updateStackWithWait(params).then(() => resolve('success'))
+                    this.updateStackWithWait(params).then(() => resolve())
                         .catch((err) => reject(err));
                 } else {
                     console.log('Stack does not exist, creating new stack');
-                    this.createStackWithWait(params).then(() => resolve('success'))
+                    this.createStackWithWait(params).then(() => resolve())
                         .catch((err) => reject(err));
                 }
             }).catch((err) => reject(err));
@@ -46,24 +46,24 @@ class CloudFormation {
      * Creates/Updates a stack using a template hosted in S3
      * @param {string} name
      * @param {string} templateUrl
-     * @returns {Promise<string>}
+     * @returns {Promise}
      * @memberOf CloudFormationUtils
      */
-    createOrUpdateStackUrl(name: string, templateUrl: string): Promise<string> {
+    async createOrUpdateStackUrl(name: string, templateUrl: string) {
         const params = {
             StackName: name,
             TemplateURL: templateUrl,
             Capabilities: ['CAPABILITY_IAM']
         };
-        return new Promise<string>((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             this.checkIfStackExists(params.StackName).then((exists) => {
                 if (exists === true) {
                     console.log('Stack exists, updating existing stack');
-                    this.updateStackWithWait(params).then(() => resolve('success'))
+                    this.updateStackWithWait(params).then(() => resolve())
                         .catch((err) => reject(err));
                 } else {
                     console.log('Stack does not exist, creating new stack');
-                    this.createStackWithWait(params).then(() => resolve('success'))
+                    this.createStackWithWait(params).then(() => resolve())
                         .catch((err) => reject(err));
                 }
             }).catch((err) => reject(err));
