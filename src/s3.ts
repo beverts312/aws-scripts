@@ -16,11 +16,11 @@ class S3 {
     }
 
     /**
-     * 
-     * @param {string} toUpload
-     * @param {string} bucket
-     * @param {string} acl
-     * @param {string} [prefix]
+     * Uploads a file or directory directory to S3 
+     * @param {string} toUpload Path of file or directory to upload
+     * @param {string} bucket Bucket to Upload to
+     * @param {string} acl Access Policy for uploaded file(s)
+     * @param {string} [prefix] Prefix for your uploaded file(s) in the bucket
      * @returns {Promise}
      * @memberOf S3
      */
