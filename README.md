@@ -33,7 +33,7 @@ Initialize the class: `const s3 = new utils.S3(opts);`, it takes these [options]
 |Script|Description|
 |------|-----------|
 |[update-record.ts](./scripts/update-record.ts)|This script can be used to easily update Route53 DNS records|
-|[upload-dir.ts](./script/update-dir.ts)|This script can be used to upload a file or folder to S3|
+|[upload-dir.ts](./scripts/upload-dir.ts)|This script can be used to upload a file or folder to S3|
 
 ## Developing  
 This library is written using [typescript](http://www.typescriptlang.org/).  
