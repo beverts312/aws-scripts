@@ -37,6 +37,16 @@ Initialize the class: `s3 = new utils.S3(opts);`, it takes these [options](http:
 |[update-record.ts](./scripts/update-record.ts)|This script can be used to easily update Route53 DNS records|
 |[upload-dir.ts](./script/update-dir.ts)|This script can be used to upload a file or folder to S3|
 
+## Developing  
+This library is written using [typescript](http://www.typescriptlang.org/).  
+All core developer functions are npm scripts:  
+* `npm install` - Get typings and packages  
+* `npm run build` - Transpile  
+* `npm run test` - Run unit tests  
+* `npm run clean` - Remove transpiled javascript  
+
+The files in the [.vscode directory](./vscode) configure the [VS Code Editor](https://code.visualstudio.com) for use with this project.  
+If you use VS Code I would reccomend the [Status Bar Tasks](https://marketplace.visualstudio.com/items?itemName=GuardRex.status-bar-tasks) extension, this will make all of those core deceloper tasks (and more) buttons on the bottom of your editor.  
 
 #### Generator  
 Initially created by this [swell generator](https://github.com/swellaby/generator-swell)  
