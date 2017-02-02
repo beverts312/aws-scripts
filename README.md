@@ -33,6 +33,7 @@ Initialize the class: `const s3 = new utils.S3(opts);`, it takes these [options]
 |Script|Description|
 |------|-----------|
 |[update-record.ts](./scripts/update-record.ts)|This script can be used to easily update Route53 DNS records|
+|[route53-on-o365.ts](./scripts/route53-on-o365.ts)|This script can be used to configure a Route53 hosted zone with O365|
 |[upload-dir.ts](./scripts/upload-dir.ts)|This script can be used to upload a file or folder to S3|
 
 ## Developing  
