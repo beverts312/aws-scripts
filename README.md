@@ -4,7 +4,7 @@ The aws-sdk is great in terms of completeness, but it typically takes a chain of
 
 I will add more features as I need them for other projects.  
 Feel free to request new features with an issue or to submit new features with a PR.  
-![](https://beverts.visualstudio.com/_apis/public/build/definitions/93e3d145-8350-4675-b220-333870597580/115/badge) [![npm](https://img.shields.io/npm/v/aws-mgmt-utils.svg)]() [![npm](https://img.shields.io/npm/dt/aws-mgmt-utils.svg)]() 
+![](https://ahool.visualstudio.com/_apis/public/build/definitions/4b152283-84d0-4972-b9a0-8c722bc44fae/1/badge) [![npm](https://img.shields.io/npm/v/aws-mgmt-utils.svg)]() [![npm](https://img.shields.io/npm/dt/aws-mgmt-utils.svg)]() 
 ## Usage
 Configure using the aws-sdk [instructions](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/configuring-the-jssdk.html).  
 
