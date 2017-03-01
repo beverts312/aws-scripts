@@ -13,7 +13,7 @@ class Route53 {
     }
 
     /**
-     * 
+     *
      * @param {string} name
      * @returns {Promise<string>}
      * @memberOf DnsUtils

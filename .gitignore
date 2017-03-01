@@ -22,3 +22,5 @@ tsd-debug.log
 
 **/testresults/
 *.tgz
+
+.vscode/settings.json

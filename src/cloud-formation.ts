@@ -18,7 +18,7 @@ class CloudFormation {
      * @param {string} name
      * @param {string} templatePath
      * @returns {Promise}
-     * 
+     *
      * @memberOf CloudFormationUtils
      */
     async createOrUpdateStackFile(name: string, templatePath: string) {

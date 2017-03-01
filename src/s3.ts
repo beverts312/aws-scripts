@@ -16,7 +16,7 @@ class S3 {
     }
 
     /**
-     * Uploads a file or directory directory to S3 
+     * Uploads a file or directory directory to S3
      * @param {string} toUpload Path of file or directory to upload
      * @param {string} bucket Bucket to Upload to
      * @param {string} acl Access Policy for uploaded file(s)
