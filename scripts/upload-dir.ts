@@ -2,8 +2,8 @@ import S3 = require('../src/s3');
 
 
 function usage() {
-    console.log('Usage: node upload-dir <dir/file to upload> <acl> <bucket> <prefix>');
-    console.log('Example: node update-record /home/user/test public-read mybucket prefix');
+    console.log('Usage: s3-upload-dir <dir/file to upload> <acl> <bucket> <prefix>');
+    console.log('Example: s3-upload-dir /home/user/test public-read mybucket prefix');
     console.log('Assumes the AWS CLI is configured on your machine');
 }
 

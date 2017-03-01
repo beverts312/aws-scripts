@@ -1,8 +1,8 @@
 import utils = require('../src/index');
 
 function usage() {
-    console.log('Usage: node update-record <record to update> <record type> <value>');
-    console.log('Example: node update-record sub.example.com A 98.101.23.99');
+    console.log('Usage: r53-update-record <record to update> <record type> <value>');
+    console.log('Example: r53-update-record sub.example.com A 98.101.23.99');
     console.log('Assumes the AWS CLI is configured on your machine');
 }
 

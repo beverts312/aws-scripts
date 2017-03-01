@@ -1,7 +1,7 @@
 import utils = require('../src/index');
 
 function usage() {
-    console.log('Usage: node route53-on-o365 <domain>');
+    console.log('Usage: r53-o365 <domain>');
     console.log('Assumes the AWS CLI is configured on your machine');
     console.log('Assumes you have already started adding your domain on o365 and completed the verification step');
 }
