@@ -102,12 +102,12 @@ class CloudFormation {
      */
     private createStackWithWait(params: AWS.CloudFormation.CreateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
-            this.cloudformation.createStack(params, (err, data) => {
+            this.cloudformation.createStack(params, (err) => {
                 if (err) {
                     reject(err);
                 } else {
                     console.log('Create operation successful, waiting for resources');
-                    this.cloudformation.waitFor('stackCreateComplete', { StackName: params.StackName }, (err, data) => {
+                    this.cloudformation.waitFor('stackCreateComplete', { StackName: params.StackName }, (err) => {
                         if (err) {
                             reject(err);
                         } else {
@@ -127,12 +127,12 @@ class CloudFormation {
      */
     private updateStackWithWait(params: AWS.CloudFormation.UpdateStackInput): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
-            this.cloudformation.updateStack(params, (err, data) => {
+            this.cloudformation.updateStack(params, (err) => {
                 if (err) {
                     reject(err);
                 } else {
                     console.log('Update operation successful, waiting for resources');
-                    this.cloudformation.waitFor('stackUpdateComplete', { StackName: params.StackName }, (err, data) => {
+                    this.cloudformation.waitFor('stackUpdateComplete', { StackName: params.StackName }, (err) => {
                         if (err) {
                             reject(err);
                         } else {

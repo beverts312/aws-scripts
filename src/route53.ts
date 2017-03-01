@@ -71,7 +71,7 @@ class Route53 {
         return new Promise((resolve, reject) => {
             this.getHostedZoneId(zoneName).then((id) => {
                 params.HostedZoneId = id;
-                this.dns.changeResourceRecordSets(params, (err, data) => {
+                this.dns.changeResourceRecordSets(params, (err) => {
                     if (err) {
                         reject(err.message);
                     }

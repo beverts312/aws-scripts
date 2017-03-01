@@ -69,7 +69,7 @@ class S3 {
             if (prefix) {
                 params.Key = prefix + params.Key;
             }
-            this.s3.upload(params, (err, data) => {
+            this.s3.upload(params, (err) => {
                 if (err) {
                     reject(err);
                 } else {
