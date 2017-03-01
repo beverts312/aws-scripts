@@ -35,18 +35,15 @@ module.exports = {
                 "SwitchCase": 1
             }
         ],
-        'linebreak-style': [
-            'off'
-        ],
-        quotes: [
-            'error',
-            'single'
-        ],
+        quotes: 'off',
         semi: [
             'error',
             'always'
         ],
-        
+        'no-console': 'off',
+        'linebreak-style': 'off',
+        'require-yield': 'off'        
+
     },
     // Custom Globals
     globals: {
