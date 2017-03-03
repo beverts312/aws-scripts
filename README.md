@@ -1,5 +1,5 @@
 # Node AWS Utils  
-Wrapper methods & scripbadgets for easy use of the AWS SDK.  
+Wrapper methods & scripts for easy use of the AWS SDK.  
 The aws-sdk is great in terms of completeness, but it typically takes a chain of a few methods to complete most simple tasks, this library aims to make it a little easier to perform specific tasks.  
 
 I will add more features as I need them for other projects.  
