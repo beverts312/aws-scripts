@@ -54,7 +54,7 @@ All core developer functions are npm scripts:
 * `npm run clean` - Remove transpiled javascript  
 
 The files in the [.vscode directory][vscode-dir] configure the [VS Code Editor][vscode-url] for use with this project.  
-If you use VS Code I would reccomend the [Status Bar Tasks][status-bar-tasks-url] extension, this will make all of those core deceloper tasks (and more) buttons on the bottom of your editor.  
+If you use VS Code I would reccomend the [Status Bar Tasks][status-bar-tasks-url] extension, this will make all of those core developer tasks (and more) buttons on the bottom of your editor.  
 
 #### Generator  
 Initially created by this [swell generator](https://github.com/swellaby/generator-swell)  
