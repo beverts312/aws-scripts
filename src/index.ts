@@ -1,5 +1,9 @@
+import CloudFormation = require('./cloud-formation');
+import Route53 = require('./route53');
+import S3 = require('./s3');
+
 export = {
-    CloudFormation: require('./cloud-formation'),
-    Route53: require('./route53'),
-    S3: require('./s3')
+    CloudFormation,
+    Route53,
+    S3
 };
